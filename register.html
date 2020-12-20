@@ -1,0 +1,52 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sty.css">
+    
+    <title>Register</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            
+
+                <div class="col-md-4 offset-md-4 form-div">
+                
+                <h3 class="text-center">Register</h3>
+
+
+             <form action='server.php' method='post'>
+
+                
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="username" name="username"   class="form-control form-control-lg" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control form-control-lg" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="Passwor">Password</label>
+                    <input type="Password" name="password_1" class="form-control form-control-lg" placeholder="********">
+                </div>
+                <div class="form-group">
+                    <label for="Passworconf">Confirm Password</label>
+                    <input type="Password" name="password_2" class="form-control form-control-lg" placeholder="********">
+                </div>
+                <div class="form-group">
+                    <button type="submit" name="reg_user" class="btn btn-primary btn-block btn-lg">Sign Up</button>
+                </div>
+                     <p class="text-center">Already a member? <a href="login.php">Sign In</a></p>
+                   
+                
+
+           </div> 
+        </div>
+    </div>
+    </form>
+</body>
+</html>

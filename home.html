@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  *{
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 28px;
+  background: lightgrey;
+ 
+}
+#header{
+      width: 100%;
+      height: 150px;
+      background: black;
+      color: white;
+    }
+    #adminlogo{
+      background: white;
+      border-radius: 50px;
+    }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+  font-family: bazooka;
+  font-size: 20px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #555;
+}
+
+.container{
+      background: lightgrey;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: grid;
+    }
+
+    .card-section{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      grid-gap: 50px;
+      align-content: center;
+      justify-items: center;
+    }
+
+    .card{
+      width: 400px;
+      display: grid;
+      justify-items: center;
+      position: relative;
+
+    }
+
+    .card-top{
+      width: 200px;
+      height: 200px;
+      background-color: #f0f0f0;
+      position: absolute;
+      top: -100px;
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+      display: grid;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-top .fa{
+      color: red;
+      font-size: 50px;
+    }
+
+    .card-body{
+      margin-top: 20px;
+      background-color: #f0f0f0;
+      padding: 80px 30px 70px;
+      text-align: center;
+      clip-path: polygon(0 0, 20% 0, 50% 32%, 80% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+ 
+    .card-heading{
+      color: red;
+      margin-top: 110px;
+      text-transform: uppercase;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .card-text{
+      margin-bottom: 0.9px;
+      font-size: 20px;
+    }
+
+
+</style>
+</head>
+<body>
+
+<div id="header">
+    <center><img src="logof.jpg" alt="adminlogo" id="adminlogo"><!--<br>This is Admin Panel, Please proced with caution!-->
+    </center>
+    
+  </div>
+<!--<div class="header">
+  <h2>Scroll Down</h2>
+  <p>Scroll down to see the sticky effect.</p>
+</div>
+-->
+<ul>
+  <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+ <li><a href="about.html"><i class="fa fa-clone"></i> AboutUs</a></li>
+ <li><a href="contact.html"><i class="fa fa-phone"></i> Contact</a> </li>
+ <li><a href="gallery.html"><i class="fa fa-picture-o"></i> Gallery</a></li>
+  <li style="float:right"><a href="register.php"><i class="fa fa-user-plus"></i> Register</a></li>
+  <li style="float:right"><a href="login.php"><i class="fa fa-sign-in"></i> Login</a></li>
+</ul>
+<div class="title">
+<img src="caf1.jpg" alt="bg" style="width:100%; margin-top: 1px; height: 550px;">
+</div>
+
+
+<div class="container">
+    <div class="card-section">
+      <div class="card">
+        <div class="card-top">
+          <i class="fa fa-wifi"></i>
+        </div>
+        <div class="card-body"><br><br>
+          <h class="card-heading">Free WiFi</h>
+          <p class="card-text">An Internet cafe is that provides Internet access to the public. The fee for using a computer is generally charged as a time-based rate.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <i class="fa fa-coffee"></i>
+        </div>
+        <div class="card-body"><br><br>
+          <h class="card-heading">New Flavours</h>
+          <p class="card-text">With the winter and the festive season upon us, everyone is looking for a reason to celebrate with the new flavours.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <i class="fa fa-gift"></i>
+        </div>
+        <div class="card-body"><br><br>
+          <h class="card-heading">Special Offers</h>
+          <p class="card-text">Restaurant promotions are usually thought of as one-time campaigns but they actually help you retain your customers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

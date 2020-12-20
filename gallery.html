@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gallery</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<style>
+  
+    body {
+  background: lightgrey;
+}
+#header1{
+      width: 100%;
+      height: 150px;
+      background: black;
+      color: white;
+    }
+    #adminlogo{
+      background: white;
+      border-radius: 50px;
+    }
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+   font-family: bazooka;
+  font-size: 20px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #555;
+}
+
+		div.gallery {
+  border: 1px solid #ccc;
+  margin: 0px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0;
+  float: left;
+  width: 33.33333%;
+  height: 2%;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.gallery:hover .image {
+  opacity: 0.5;
+}
+
+.gallery:hover .middle {
+  opacity: 1;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 50%;
+    margin: 0px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+		
+		</style>
+</head>
+<body>
+
+	  <div id="header1">
+    <center><img src="logof.jpg" alt="adminlogo" id="adminlogo"><!--<br>This is Admin Panel, Please proced with caution!-->
+    </center>
+    
+  </div>
+  <ul class="nav">
+  <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+    <li><a href="about.html"><i class="fa fa-clone"></i> About us</a></li>
+  <li><a href="contact.html"><i class="fa fa-phone"></i> Contact</a></li>
+    <li class="active"><a href="#"><i class="fa fa-picture-o"></i> Gallery</a></li>
+  <li><a href="table.html"><i class="fa fa-table"></i> Book a Table</a></li>
+    <li><a href="menu.html"><i class="fa fa-coffee"></i> Menu</a>
+  </li>
+
+  <li style="float:right"><a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a></li>
+</ul>
+
+<h1></h1>
+<br>
+<br>
+<hr>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_5terre.jpg">
+      <img src="1.jpg" alt="Cinque Terre" class="image" width="600" height="400">
+      <div class="middle">
+  </div>
+    </a>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="2.jpg" alt="Forest" class="image" width="600" height="400">
+      <div class="middle">
+     </div>
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="3.jpg" alt="Northern Lights" class="image" width="600" height="400">
+      <div class="middle">
+  </div>
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="4.jpg" alt="Mountains" class="image" width="600" height="400">
+      <div class="middle">
+  </div>
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="5.jpg" alt="Mountains" class="image" width="600" height="400">
+      <div class="middle">
+  </div>
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="6.jpg" alt="Mountains" class="image" width="600" height="400">
+      <div class="middle">
+  </div>
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="7.jpg" alt="Mountains" class="image" width="600" height="400">
+      <div class="middle">
+  </div>
+    </a>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="9.jpg" alt="Mountains" class="image" width="600" height="400">
+      <div class="middle">
+  </div>
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="8.jpg" alt="Mountains" class="image" width="600" height="400">
+      <div class="middle">
+  </div>
+    </a>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+
+</body>
+</html>

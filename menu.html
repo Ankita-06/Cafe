@@ -1,0 +1,743 @@
+<html>
+<head>
+  <title>Menu</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<style>
+  
+    body {
+  background: lightgrey;
+}
+#header1{
+      width: 100%;
+      height: 150px;
+      background: black;
+      color: white;
+    }
+    #adminlogo{
+      background: white;
+      border-radius: 50px;
+    }
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+   font-family: bazooka;
+  font-size: 20px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #555;
+}
+		
+		html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 24%;
+  height: 90%;
+  margin-bottom: 100px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 8 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button1 {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button1:hover {
+  background-color: #555;
+}
+.v {
+  position: center;
+}
+
+	</style>
+<script>
+function cart(id,n){
+//alert("Item id is: "+id+' qty: '+n);
+var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //document.getElementById("demo").innerHTML = this.responseText;\
+      alert(this.responseText);
+    }
+  };
+  xhttp.open("GET", "addincart.php?id="+id+"&qty="+n, true);
+  xhttp.send();
+  //window.open("addincart.php?id="+id+"&qty="+n);
+}
+
+function qty(n){
+//alert('Item quantity is: '+n);
+}
+</script>
+</head>
+<body>
+  <div id="header1">
+    <center><img src="logof.jpg" alt="adminlogo" id="adminlogo"><!--<br>This is Admin Panel, Please proced with caution!-->
+    </center>
+    
+  </div>
+  <ul class="nav">
+  <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+  <li><a href="about.html"><i class="fa fa-clone"></i> About us</a></li>
+  <li><a href="contact.html"><i class="fa fa-phone"></i> Contact</a></li>
+   <li><a href="gallery.html"><i class="fa fa-picture-o"></i> Gallery</a></li>
+   <li><a href="table.html"><i class="fa fa-table"></i> Book a Table</a></li>
+    <li class="active"><a href="menu.html"><i class="fa fa-coffee"></i> Menu</a></li>
+  <li><a href="cart.php"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+  <li><a href="order.php"><i class="fa fa-list"></i> My Orders</a></li>
+   
+
+  <li style="float:right"><a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a></li>
+</ul>
+
+<br>
+<h1><center>Coffee</center></h1>
+
+ 
+  <br>
+
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="drink1.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Mocha Frappuccino</h2>
+        <p class="title">Coffee</p>
+        <p>Roast coffee blended with mocha sauce, coconut syrup, milk, and ice, and then topped with whipped cream, chocolate drizzle and toasted coconut flakes.</p>
+        <p>Prize :-330/-</p>
+        <select id='q1'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(1,document.getElementById('q1').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="drink2.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Dark Caramel Latte</h2>
+        <p class="title">Coffee</p>
+        <p>A combination of creamy dark caramel sauce with steamed milk with signature espresso then finished off with whipped cream and a custardy, caramel drizzle.
+
+</p>
+        <p>Prize :-300/-</p>
+        <select id='q2'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(2,document.getElementById('q2').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="drink3.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Espresso Con Panna</h2>
+        <p class="title">Coffee</p>
+        <p>The delicate dollop of whipped cream softens the rich and caramelly espresso flavours so exquisitely, you may choose to forego adding sugar altogether.</p>
+        <p>Prize :-120/-</p>
+        <select id='q3'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(3,document.getElementById('q3').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="drink4.jpeg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Tiramisu Latte</h2>
+        <p class="title">Coffee</p>
+        <p>Tiramisu Latte is made with the signature espresso, freshly-steamed milk, creamy mascarpone flavor, and a dusting of rich cocoa espresso powder.</p>
+        <p>Prize :-170/-</p>
+        <select id='q4'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(4,document.getElementById('q4').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="drink5.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Americano</h2>
+        <p class="title">Coffee</p>
+        <p> Often served in cappuccino cup.The espresso is added into hot water rather than all the water being flowed through coffee that would lead to over extraction.</p>
+        <p>Prize :-110/-</p>
+        <select id='q5'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(5,document.getElementById('q5').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="drink6.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>French Coffee</h2>
+        <p class="title">Coffee</p>
+        <p>Made by mixing dark roasted filter coffee (often prepared with French Press) and warm milk. Served in a bowl or a large coffee cup.</p>
+        <p>Prize :-160/-</p>
+        <select id='q6'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(6,document.getElementById('q6').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+   <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="drink7.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Vanilla Cream Cold Brew</h2>
+        <p class="title">Coffee</p>
+        <p>A slow-steeped, super smooth icy-cold cup of coffee with naturally sweet undertones of refreshing citrus and soft chocolaty flavours. </p>
+        <p>Prize :-230/-</p>
+        <select id='q7'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(7,document.getElementById('q7').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+     <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="drink8.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Vegan Shake</h2>
+        <p class="title">Coffee</p>
+        <p>It is creamy and chocolatey and totally delicious with over 20 grams of protein per serve! This vegan protein shake is so good and it’s healthy too. </p>
+        <p>Prize :-120/-</p>
+        <select id='q8'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(8,document.getElementById('q8').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+  <br>
+
+
+  <br>
+
+  <br>
+  <br>
+<br>
+
+<hr style="width: 100%; text-align: center">
+
+<h1><center>Foods</center></h1>
+<br>
+
+<div class="column">
+    <div class="card">
+      <img src="food1.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Chocolate Croissants</h2>
+        <p class="title">Food</p>
+        <p>Croissants can contain similar amounts of saturated fat to a greasy fry-up complete with egg, bacon, sausage, bread and beans.</p>
+        <p>Prize :-150/-</p>
+        <select id='q9'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(9,document.getElementById('q9').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="food2.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Blueberry Muffins</h2>
+        <p class="title">Food</p>
+        <p>These easy, one-bowl, no-mixer Blueberry Muffins are moist, delicious, loaded with juicy blueberries and they rise up high, with beautiful domed tops!</p>
+        <p>Prize :-50/-</p>
+        <select id='q10'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(10,document.getElementById('q10').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  
+
+  <div class="column">
+    <div class="card">
+      <img src="food3.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Chilli Cheese Toast</h2>
+        <p class="title">Food</p>
+        <p>Cheesy with this crispy toast topped with onions, tomatoes and capsicum, loaded with cheese and sprinkled with chilli flakes.</p>
+        <p>Prize :-90/-</p>
+        <select id='q11'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(11,document.getElementById('q11').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="column">
+    <div class="card">
+      <img src="food4.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Crispy Veggie Wrap</h2>
+        <p class="title">Food</p>
+        <p>An inviting mixture of cage-free scrambled eggs, black beans, and sous vide potatoes combined with the delicious flavors of Cotija cheese</p>
+        <p>Prize :-140/-</p>
+        <select id='q12'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(12,document.getElementById('q12').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="column">
+    <div class="card">
+      <img src="food5.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Peppy Chicken Roll</h2>
+        <p class="title">Food</p>
+        <p>Peppery chicken with crunchy juliennes of capsicum and red onion in a delicious Malabar egg paratha. Yes, that's how we roll.</p>
+        <p>Prize :-130/-</p>
+        <select id='q13'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(13,document.getElementById('q13').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="column">
+    <div class="card">
+      <img src="food6.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Smoked Chick Sandwich</h2>
+        <p class="title">Food</p>
+        <p>Succulent smoked chicken topped with the crunchy veggies and it served in a white bread which is topped with chipotle.</p>
+        <p>Prize :-130/-</p>
+        <select id='q14'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(14,document.getElementById('q14').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+
+ 
+
+  <div class="column">
+    <div class="card">
+      <img src="food7.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Munch-On Nachos</h2>
+        <p class="title">Food</p>
+        <p>The crispiest of the corn chips are pampered with the salsa from the land of Tex-Mex. <br>
+         Munch hunger away!  </p>
+        <p>Prize :-65/-</p>
+        <select id='q15'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(15,document.getElementById('q15').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+   
+
+
+  <div class="column">
+    <div class="card">
+      <img src="food8.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Garlic Bread</h2>
+        <p class="title">Food</p>
+        <p> Garlic and butter are the main ingredients of all garlic bread recipes. But this stuffed garlic bread recipe is unique for its tasty stuffing like corn and mozzarella cheese.</p>
+        <p>Prize :-70/-</p>
+        <select id='q16'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(16,document.getElementById('q16').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+
+  <br>
+
+  <br>
+  <br>
+<br>
+
+<hr style="width: 100%; text-align: center">
+<h1><center>Desserts</center></h1>
+<br>
+
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="dessert1.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Blueberry Delight Cake</h2>
+        <p class="title">Dessert</p>
+        <p> Blueberry Delight is a modern convenience dessert which has a graham-cracker-crust base and is filled with a blend of cream cheese or the vanilla pudding </p>
+        <p>Prize :-450/-</p>
+        <select id='q17'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(17,document.getElementById('q17').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="dessert2.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Fudgy Brownie Pie</h2>
+        <p class="title">Dessert</p>
+        <p>Fudge brownie pie is a phenomenal chocolate indulgence with all the flavor, texture, and decadence of a hot fudge brownie that’s so low-fuss that absolutely anyone can make it!</p>
+        <p>Prize :-200/-</p>
+        <select id='q18'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(18,document.getElementById('q18').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="dessert3.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Mississippi Mud Pie</h2>
+        <p class="title">Dessert</p>
+        <p>Mississippi mud pie is a chocolate-based dessert pie that a gooey chocolate sauce on the top of a crumbly chocolate crust. The pie is usually served with the ice cream.</p>
+        <p>Prize :-110/-</p>
+        <select id='q19'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(19,document.getElementById('q19').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="dessert4.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Dutch Truffle Pastry</h2>
+        <p class="title">Dessert</p>
+        <p>A chocolate truffle is a type of chocolate confectionery, traditionally made with a chocolate ganache centre coated in chocolate, cocoa powder, coconut, or chopped toasted nuts.</p>
+        <p>Prize :-60/-</p>
+        <select id='q20'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(20,document.getElementById('q20').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="dessert5.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Cherry Bakewell Pudding</h2>
+        <p class="title">Dessert</p>
+        <p>Bakewell pudding is an English dessert consisting of a flaky pastry base with a layer of sieved jam and topped with a filling made of egg and almond paste.</p>
+        <p>Prize :-200/-</p>
+        <select id='q21'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(21,document.getElementById('q21').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="dessert6.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Red Velvet Cake</h2>
+        <p class="title">Dessert</p>
+        <p>Red velvet cake is traditionally a red, red-brown, crimson or scarlet-colored chocolate layer cake, layered with ermine icing.</p>
+        <p>Prize :-550/-</p>
+        <select id='q22'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(22,document.getElementById('q22').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+ 
+   <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="dessert7.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Manchester Tart</h2>
+        <p class="title">Dessert</p>
+        <p>Manchester tart is a traditional baked tart consisting of a shortcrust pastry shell, spread with raspberry jam, covered with a custard filling with coconut and a cherry.</p>
+        <p>Prize :-400/-</p>
+        <select id='q23'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(23,document.getElementById('q23').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+   
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="dessert8.jpg" alt="" style="width:100%">
+      <div class="container">
+        <h2>Tiramisu</h2>
+        <p class="title">Dessert</p>
+        <p>Tiramisu is a coffee-flavoured dessert which made of ladyfingers dipped in coffee, layered with a whipped mixture of eggs, sugar, cheese, flavoured with cocoa.</p>
+        <p>Prize :-90/-</p>
+        <select id='q24'>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <button  onclick="cart(24,document.getElementById('q24').value)">ADD TO CART</button>
+<br><br>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
